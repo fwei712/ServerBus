@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 映射文件需要一个dtd来指定格式 -->
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 该文件配置domain对象和表的映射关系 -->
+<hibernate-mapping package="com.bus.domain">
+	<class name="BusLocation" table="busLocation">
+	<!-- id元素用于指定主键属性 -->
+	<id name="id" column="id" type="java.lang.Integer">
+	<generator class="increment" />
+	</id>
+	<!-- 对其他属性配置 -->
+	<property name="busid" type="java.lang.Integer">
+	<column name="busid"  not-null="false"></column>
+	</property>
+	
+	<property name="end" type="java.lang.Integer">
+	<column name="end"  not-null="false"></column>
+	</property>
+	
+	<property name="start" type="java.lang.Integer">
+	<column name="start"  not-null="false"></column>
+	</property>
+	
+	<property name="state" type="java.lang.Integer">
+	<column name="state"  not-null="false"></column>
+	</property>
+	
+	
+	
+	
+	<property name="longitude" type="java.lang.Double">
+	<column name="longitude" length="128" not-null="false"></column>
+	</property>
+	
+	<property name="latitude" type="java.lang.Double">
+	<column name="latitude" length="128" not-null="false"></column>
+	</property>
+	
+	<property name="speed" type="java.lang.Float">
+	<column name="speed" length="64" not-null="false"></column>
+	</property>
+	
+	<property name="rotationangle" type="java.lang.Float">
+	<column name="rotationangle" length="64" not-null="false"></column>
+	</property>
+	
+	
+	<property name="recdate" type="java.util.Date">
+	<column name="recdate" not-null="false"></column>
+	</property>
+	
+	</class>
+</hibernate-mapping>

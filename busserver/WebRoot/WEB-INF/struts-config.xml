@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+<struts-config>
+	<form-beans>
+	<form-bean name="administratorForm" type="com.bus.web.forms.AdministratorForm" />
+	</form-beans>
+	
+	<action-mappings>
+	<action path="/login" name="administratorForm" parameter="flag" type="com.bus.web.action.LoginAction">
+	<forward name="ok" path="/WEB-INF/MainFrame.jsp"/>
+	<forward name="err" path="/WEB-INF/login.jsp"/>	
+	</action>
+	
+
+	</action-mappings>	
+</struts-config>
